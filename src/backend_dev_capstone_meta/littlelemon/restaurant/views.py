@@ -6,6 +6,8 @@ from .serializers import BookingSerializer, MenuItemSerializer
 from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAuthenticated
 
+def home(request):
+    return render(request, 'index.html', {})
 
 class BookingViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]

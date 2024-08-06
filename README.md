@@ -2,7 +2,7 @@
 
 How to set up the project:
 
-As a package manager, I use pdm. You can download it via pip and then type 
+As a package manager, PDM was used. You can download it via pip and then type 
 ```
 pdm install 
 ```
@@ -12,11 +12,12 @@ To run the application, type: <br>
 ```
 python manage.py runserver
 ```
-<br><br>
+<br>
 The APIs can be tested at: <br>
 127.0.0.1:8000/restaurant/menu/menu-items <br>
 127.0.0.1:8000/restaurant/menu/menu-items/2 <br>
 127.0.0.1:8000/restaurant/bookings/ <br>
+<br>
 User creation can be done at: <br>
 127.0.0.1:8000/auth/users <br>
 <br>

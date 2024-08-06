@@ -22,6 +22,7 @@ User creation can be done at: <br>
 127.0.0.1:8000/auth/users <br>
 <br>
 To test the application, type: 
+
 ```
 python manage.py test
 ```

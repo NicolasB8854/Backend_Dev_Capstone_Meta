@@ -10,15 +10,15 @@
 ## Setup 
 
 <p> As a package manager, PDM was used. You can download it via pip and then type </p>
-```
+<pre><code>
 pdm install 
-```
+</code></pre>
 <p> Into the command line to activate the virtual environment. </p>
 <br>
 <p> To run the application, type: </p>
-```
+<pre><code>
 python manage.py runserver
-```
+</code></pre>
 
 ## Testing 
 
@@ -32,5 +32,7 @@ The APIs can be tested at: <br>
 <br>
 <p> To test the application, type: <p>
 ```
+<pre><code>
 python manage.py test
+</code></pre>
 ```

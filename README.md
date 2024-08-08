@@ -10,15 +10,15 @@
 ## Setup 
 
 <p> As a package manager, PDM was used. You can download it via pip and then type </p>
-<pre><code>
+<code>
 pdm install 
-</code></pre>
+</code>
 <p> Into the command line to activate the virtual environment. </p>
 <br>
 <p> To run the application, type: </p>
-<pre><code>
+<code>
 python manage.py runserver
-</code></pre>
+</code>
 
 ## Testing 
 
@@ -31,8 +31,6 @@ The APIs can be tested at: <br>
 <li> 127.0.0.1:8000/booking-api/ </li>
 <br>
 <p> To test the application, type: <p>
-```
-<pre><code>
+<code>
 python manage.py test
-</code></pre>
-```
+</code>

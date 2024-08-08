@@ -9,16 +9,18 @@
 <img src="/littlelemon_start.jpg"></img>
 ## Setup 
 
-<p> As a package manager, PDM was used. You can download it via pip and then type </p>
+<p> As a package manager, PDM was used. You can download it via pip and then type:
 <code>
 pdm install 
 </code>
+</p>
 <p> Into the command line to activate the virtual environment. </p>
 <br>
-<p> To run the application, type: </p>
+<p> To run the application, type:
 <code>
 python manage.py runserver
 </code>
+</p>
 
 ## Testing 
 
@@ -30,7 +32,8 @@ The APIs can be tested at: <br>
 <li> 127.0.0.1:8000/menu-api/3 </li>
 <li> 127.0.0.1:8000/booking-api/ </li>
 <br>
-<p> To test the application, type: <p>
+<p> To test the application, type:
 <code>
 python manage.py test
 </code>
+</p>

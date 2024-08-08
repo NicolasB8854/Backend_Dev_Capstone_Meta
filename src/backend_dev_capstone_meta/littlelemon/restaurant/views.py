@@ -7,7 +7,10 @@ from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAuthenticated
 
 def home(request):
-    return render(request, 'index.html', {})
+    return render(request, 'index.html')
+
+def about(request):
+    return render(request, 'about.html')
 
 class BookingViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]

@@ -1,27 +1,36 @@
 # Backend_Dev_Capstone_Meta
 
-How to set up the project:
+## Introduction
+<p> This project serves as a Full-Stack Web Application for the Little Lemon Restaurant. </p>
+<p> It's key functionalities are: </p>
+<li> Menu</li>
+<li> Reservation</li>
+<li> API</li>
+<img src="/littlelemon_start.jpg"></img>
+## Setup 
 
-As a package manager, PDM was used. You can download it via pip and then type 
+<p> As a package manager, PDM was used. You can download it via pip and then type </p>
 ```
 pdm install 
 ```
-Into the command line to activate the virtual environment. <br>
+<p> Into the command line to activate the virtual environment. </p>
 <br>
-To run the application, type: <br>
+<p> To run the application, type: </p>
 ```
 python manage.py runserver
 ```
-<br>
+
+## Testing 
+
+<p> For API Testing, you will need to create a user. This can be done via: </p>
+<p> 127.0.0.1:8000/auth/users <p>
+
 The APIs can be tested at: <br>
-127.0.0.1:8000/restaurant/menu/menu-items <br>
-127.0.0.1:8000/restaurant/menu/menu-items/2 <br>
-127.0.0.1:8000/restaurant/bookings/ <br>
+<li> 127.0.0.1:8000/menu-api/ </li>
+<li> 127.0.0.1:8000/menu-api/3 </li>
+<li> 127.0.0.1:8000/booking-api/ </li>
 <br>
-User creation can be done at: <br>
-127.0.0.1:8000/auth/users <br>
-<br>
-To test the application, type: 
+<p> To test the application, type: <p>
 ```
 python manage.py test
 ```

@@ -20,10 +20,7 @@ from restaurant import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('about/', views.about, name="about"),
-    path('restaurant/menu/',include('restaurant.urls')),
-    path('restaurant/booking/', include('restaurant.urls')),
+    path('', include('restaurant.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
 ]

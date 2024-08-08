@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>All Reservations</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <!-- Add a container for the table -->
+        <div id="bookings-container"></div>
+      </div>
+      <!--End col-->
+      
+      <!--Begin col-->
+      <div class="column map-column">
+        <div class="videowrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11898.289517452584!2d-87.60853049433447!3d41.79442860243028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2912ce6f7027%3A0xc0cfb5545d4a37b2!2sHyde%20Park%2C%20Chicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2spt!4v1662384760663!5m2!1sen!2spt"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+
+<script>
+  const bookingsJson = '{{ bookings|escapejs }}';
+  const bookings = JSON.parse(bookingsJson);
+
+  // Create table to display bookings
+  const container = document.getElementById('bookings-container');
+  if (bookings.length > 0) {
+    const table = document.createElement('table');
+    table.classList.add('booking-table');
+    
+    // Create table header
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    ['Name', 'Number of Guests', 'Booking Date'].forEach(text => {
+      const th = document.createElement('th');
+      th.textContent = text;
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    
+    // Create table body
+    const tbody = document.createElement('tbody');
+    bookings.forEach(booking => {
+      const row = document.createElement('tr');
+      const fields = booking.fields;
+      
+      const nameCell = document.createElement('td');
+      nameCell.textContent = fields.name;
+      row.appendChild(nameCell);
+      
+      const guestsCell = document.createElement('td');
+      guestsCell.textContent = fields.number_of_guests;
+      row.appendChild(guestsCell);
+      
+      const dateCell = document.createElement('td');
+      const date = new Date(fields.booking_date);
+      dateCell.textContent = date.toLocaleDateString();
+      row.appendChild(dateCell);
+      
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+    
+    container.appendChild(table);
+  } else {
+    container.textContent = 'No reservations found.';
+  }
+</script>
+{% endblock %}

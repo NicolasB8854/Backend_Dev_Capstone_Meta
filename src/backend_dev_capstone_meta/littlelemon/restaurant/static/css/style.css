@@ -204,6 +204,7 @@ footer p {
     width: 100%;
     padding-bottom: 1rem;
     align-items: center;
+    gap: 1rem; /* Adjust gap as needed */
 }
 
 .column {
@@ -258,4 +259,25 @@ footer p {
     #button {
         width: 100%;
     }
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.booking-table th, .booking-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.booking-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.booking-table td {
+    background-color: #fff;
 }

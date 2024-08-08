@@ -7,15 +7,6 @@
 <li> Viewing the Reservations that are already present in the database </li>
 <li> For authenticated user, an API is provided to add items to the menu list</li>
 
-## Table of Contents
-- [Backend Dev Capstone Meta](#backend-dev-capstone-meta)
-  - [Table of Contents](#table-of-contents)
-  - [Setup](#setup)
-  - [Usage](#usage)
-  - [Testing](#testing)
-  - [Contributing](#contributing)
-
-
 ## Setup 
 
 <p> As a package manager, PDM was used. You can download it via pip and then type: </p>

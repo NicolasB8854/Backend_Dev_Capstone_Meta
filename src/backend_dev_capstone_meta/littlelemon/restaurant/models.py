@@ -5,6 +5,7 @@ class Booking(models.Model):
     name = models.CharField(max_length=255)
     number_of_guests = models.IntegerField()
     booking_date = models.DateTimeField()
+    reservation_slot = models.SmallIntegerField(default=10)
 
 class MenuItem(models.Model):
     title = models.CharField(max_length=255)
